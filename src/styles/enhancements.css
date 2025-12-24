@@ -1,0 +1,315 @@
+/* Additional Professional Enhancements */
+
+/* Smooth fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations to sections */
+.elementor-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.elementor-column {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Stagger animation delays */
+.elementor-column:nth-child(1) { animation-delay: 0.1s; }
+.elementor-column:nth-child(2) { animation-delay: 0.2s; }
+.elementor-column:nth-child(3) { animation-delay: 0.3s; }
+.elementor-column:nth-child(4) { animation-delay: 0.4s; }
+
+/* Professional hover effects */
+.service-one-item,
+.xcency-working-process-box,
+.contact-box-one-item,
+.xcency-testimonial-one-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-one-item::after,
+.xcency-working-process-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(102, 126, 234, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.service-one-item:hover::after,
+.xcency-working-process-box:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Improved button hover effects */
+.xcency-button {
+  position: relative;
+  z-index: 1;
+}
+
+.xcency-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.5s;
+  z-index: -1;
+}
+
+.xcency-button:hover::before {
+  left: 100%;
+}
+
+/* Professional card shadows */
+.service-one-item,
+.xcency-working-process-box,
+.contact-box-one-item,
+.xcency-testimonial-one-item,
+.xcency-single-project-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Improved form inputs */
+.xcency-contact-form input,
+.xcency-contact-form textarea,
+.xcency-contact-form select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.xcency-contact-form input:hover,
+.xcency-contact-form textarea:hover {
+  border-color: var(--primary-color);
+}
+
+/* Professional navigation */
+.main-navigation .menu-item a {
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.main-navigation .menu-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  transition: width 0.3s ease;
+}
+
+.main-navigation .menu-item:hover a::after,
+.main-navigation .menu-item.current-menu-item a::after {
+  width: 100%;
+}
+
+/* Professional header scroll effect */
+.header-area.site-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Improved section spacing */
+.elementor-section {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .elementor-section {
+    padding: 50px 0;
+  }
+}
+
+/* Professional gradient backgrounds */
+.gradient-bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-light {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+/* Improved text readability */
+p {
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+/* Professional list styles */
+ul.xcency-list-style li {
+  padding: 8px 0;
+  transition: padding-left 0.3s ease;
+}
+
+ul.xcency-list-style li:hover {
+  padding-left: 8px;
+}
+
+/* Better focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Professional loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, textarea, select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional image effects */
+img {
+  transition: transform 0.3s ease;
+}
+
+.service-one-item:hover img,
+.xcency-project-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Improved mobile menu */
+.mobile-menu-container {
+  background: rgba(26, 32, 44, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+.mobile-menu-container .menu a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-container .menu a:hover,
+.mobile-menu-container .menu .current-menu-item a {
+  color: var(--primary-color);
+  padding-left: 10px;
+}
+
+/* Professional footer improvements */
+.site-footer {
+  position: relative;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Better contrast for text */
+.text-muted {
+  color: var(--text-light);
+}
+
+/* Professional badges/tags */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* Improved spacing utilities */
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+/* Professional section dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+  margin: 60px 0;
+}
+
+/* Improved readability */
+.container {
+  max-width: 1200px;
+}
+
+/* Professional grid spacing */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+

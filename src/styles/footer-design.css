@@ -1,0 +1,420 @@
+/* Modern Footer Design Enhancements */
+
+.site-footer {
+  background: #ffffff;
+  position: relative;
+}
+
+/* Footer Main Content Section */
+.site-footer .elementor-section-boxed {
+  padding: 80px 0 60px;
+  background: #ffffff;
+  position: relative;
+}
+
+.site-footer .elementor-section-boxed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+}
+
+/* Footer Widget Styling */
+.site-footer .widget-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.site-footer .widget-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #00fcfa 0%, #00d4ff 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.site-footer .elementor-column:hover .widget-title::after {
+  width: 70px;
+}
+
+.widget-title-two {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* About Company Widget */
+.about-info-img {
+  margin-bottom: 25px;
+}
+
+.about-info-img img {
+  max-width: 180px;
+  height: auto;
+  filter: brightness(0.95);
+  transition: all 0.3s ease;
+}
+
+.about-info-img:hover img {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.widget-about-description {
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.widget-about-description p {
+  margin: 0;
+}
+
+/* Quick Links */
+.site-footer .xcency-list-style li {
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.site-footer .xcency-list-style li a {
+  color: #666;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.site-footer .xcency-list-style li a svg {
+  color: var(--xcency-primary-color-one, #00fcfa);
+  transition: all 0.3s ease;
+}
+
+.site-footer .xcency-list-style li a:hover {
+  color: var(--xcency-primary-color-one, #00fcfa);
+  transform: translateX(5px);
+}
+
+.site-footer .xcency-list-style li a:hover svg {
+  transform: translateX(3px);
+  color: var(--xcency-primary-color-one, #00fcfa);
+}
+
+/* Contact Info */
+.desc-text p {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.widget-contact-info-list li {
+  margin-bottom: 12px;
+}
+
+.widget-contact-info-list li a {
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.widget-contact-info-list li a:hover {
+  color: var(--xcency-primary-color-one, #00fcfa);
+}
+
+/* Newsletter Section */
+.footer_subscribe_widget {
+  background: #2a2a2a;
+  padding: 35px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.footer_subscribe_widget:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.footer_subscribe_widget .widget-title {
+  color: #ffffff;
+}
+
+.footer_subscribe_widget .widget-title::after {
+  background: linear-gradient(90deg, #00fcfa 0%, #00d4ff 100%);
+}
+
+.footer_subscribe_widget .subscribe-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subscribe-desc {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Newsletter Form */
+.xcency-subscribe-form {
+  margin-bottom: 25px;
+}
+
+.mc4wp-form-fields {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mc4wp-form-fields input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.mc4wp-form-fields input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mc4wp-form-fields input[type="email"]:focus {
+  outline: none;
+  border-color: var(--xcency-primary-color-one, #00fcfa);
+  box-shadow: 0 0 0 3px rgba(0, 252, 250, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.footer_subscribe_widget .mc4wp-form-fields input[type="email"] {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.footer_subscribe_widget .mc4wp-form-fields input[type="email"]:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--xcency-primary-color-one, #00fcfa);
+}
+
+.xcency-subscribe-button {
+  flex-shrink: 0;
+}
+
+.xcency-subscribe-button input[type="submit"] {
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.xcency-subscribe-button input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Social Media */
+.social-media-wrapper {
+  margin-top: 25px;
+}
+
+.social-media-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.footer_subscribe_widget .social-media-title {
+  color: #ffffff;
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-social-icon li {
+  list-style: none;
+  margin: 0;
+}
+
+.footer-social-icon li a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 50%;
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer_subscribe_widget .footer-social-icon li a {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-social-icon li a:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.footer-social-icon li a svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer Copyright Section */
+.site-footer .elementor-section-stretched:last-child {
+  background: #1a1a1a;
+  padding: 30px 0;
+  margin-top: 0;
+}
+
+.site-footer .elementor-section-stretched:last-child p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: 14px;
+}
+
+.site-footer .elementor-icon-list-items {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.site-footer .elementor-icon-list-item {
+  list-style: none;
+  margin: 0;
+}
+
+.site-footer .elementor-icon-list-text {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.site-footer .elementor-icon-list-item a:hover .elementor-icon-list-text {
+  color: var(--xcency-primary-color-one, #00fcfa);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 991px) {
+  .site-footer .elementor-section-boxed {
+    padding: 60px 0 40px;
+  }
+  
+  .site-footer .elementor-column {
+    margin-bottom: 40px;
+  }
+  
+  .footer_subscribe_widget {
+    padding: 25px;
+  }
+  
+  .mc4wp-form-fields {
+    flex-direction: column;
+  }
+  
+  .xcency-subscribe-button {
+    width: 100%;
+  }
+  
+  .xcency-subscribe-button input[type="submit"] {
+    width: 100%;
+  }
+  
+  .site-footer .elementor-icon-list-items {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .site-footer .widget-title {
+    font-size: 1.3rem;
+  }
+  
+  .about-info-img img {
+    max-width: 150px;
+  }
+  
+  .footer_subscribe_widget {
+    padding: 20px;
+  }
+  
+  .site-footer .elementor-section-stretched:last-child {
+    text-align: center;
+  }
+  
+  .site-footer .elementor-icon-list-items {
+    justify-content: center;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-footer .elementor-column {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.site-footer .elementor-column:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.site-footer .elementor-column:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.site-footer .elementor-column:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.site-footer .elementor-column:nth-child(4) {
+  animation-delay: 0.4s;
+}
+

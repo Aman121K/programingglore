@@ -8,24 +8,30 @@ This guide provides **5 modern, professional color scheme options** for your web
 - ✅ Feel modern and fresh
 - ✅ Work well for a tech/digital services company
 
-## 🎯 Recommended: Modern Tech Blue
+## 🎯 Recommended: Logo Gray-Blue ⭐ (Currently Applied)
 
-**Best for:** Professional tech companies, B2B services, corporate websites
+**Best for:** Matching your logo colors, professional branding consistency
 
 **Colors:**
-- Primary: `#2563eb` (Vibrant Blue)
-- Secondary: `#10b981` (Emerald Green)
-- Accent: `#8b5cf6` (Purple)
+- Primary: `#2563eb` (Professional Blue from logo)
+- Secondary: `#64748b` (Slate Gray from logo)
+- Accent: `#3b82f6` (Bright Blue)
 
 **Why it works:**
+- Matches your logo's gray and blue color scheme
 - Blue conveys trust, professionalism, and technology
-- Green adds freshness and growth
+- Gray provides elegant, neutral balance
+- Creates consistent brand identity across your website
 - High contrast ensures readability
-- Works well for portfolios and service pages
 
 ## 📋 All Available Color Schemes
 
-### Option 1: Modern Tech Blue ⭐ (Recommended)
+### Option 1: Logo Gray-Blue ⭐ (Currently Applied)
+- **Primary:** `#2563eb` (Blue from logo)
+- **Secondary:** `#64748b` (Gray from logo)
+- **Best for:** Brand consistency, matching logo colors, professional websites
+
+### Option 2: Modern Tech Blue
 - **Primary:** `#2563eb` (Blue)
 - **Secondary:** `#10b981` (Green)
 - **Best for:** Professional, trustworthy, tech-forward
@@ -49,6 +55,11 @@ This guide provides **5 modern, professional color scheme options** for your web
 - **Primary:** `#f97316` (Orange)
 - **Secondary:** `#06b6d4` (Cyan)
 - **Best for:** Friendly, approachable, inviting brands
+
+### Option 6: Logo Gray-Blue ⭐ (Current Default)
+- **Primary:** `#2563eb` (Professional Blue)
+- **Secondary:** `#64748b` (Slate Gray)
+- **Best for:** Matching logo colors, brand consistency, professional websites
 
 ## 🚀 How to Apply a Color Scheme
 

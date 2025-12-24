@@ -196,6 +196,21 @@ body {
   text-decoration: none;
 }
 
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo-link img {
+  display: block;
+}
+
 .nav-menu {
   display: flex;
   gap: var(--spacing-md);
@@ -216,19 +231,28 @@ body {
 }
 
 .header-contact-btn {
-  background: linear-gradient(90deg, #FF6B9D 0%, #FFB88C 100%);
-  color: var(--secondary-color);
+  background: var(--primary-gradient);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
   padding: 0.625rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-contact-btn:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.4);
+  box-shadow: var(--shadow-md);
+  color: #ffffff;
 }
 
 .mobile-menu-toggle {

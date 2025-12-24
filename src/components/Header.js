@@ -28,7 +28,9 @@ const Header = () => {
   return (
     <header className={`header-area ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
-        <img src="/assets/images/logo.png" alt="Programmingglore Logo" style={{ maxHeight: '40px' }} />
+        <Link to="/" className="logo-link" style={{ cursor: 'pointer' }}>
+          <img src="/assets/images/logo.png" alt="Programmingglore Logo" style={{ maxHeight: '40px' }} />
+        </Link>
         {/* <Link to="/" className="logo">
           Programmingglore
         </Link> */}

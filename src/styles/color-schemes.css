@@ -198,41 +198,86 @@
 }
 
 /* ============================================
-   DEFAULT: Apply Modern Blue Theme
-   (Change data-theme attribute to switch)
+   OPTION 6: LOGO GRAY-BLUE (Matching Logo Colors)
+   Professional gray and blue combination
    ============================================ */
-:root {
-  /* Primary Colors */
-  --primary-color: #2563eb;
-  --primary-dark: #1e40af;
-  --primary-light: #dbeafe;
+:root[data-theme="logo-gray-blue"] {
+  /* Primary Colors - Blue from Logo */
+  --primary-color: #2563eb;           /* Professional blue */
+  --primary-dark: #1e40af;            /* Darker blue for hover */
+  --primary-light: #dbeafe;            /* Light blue for backgrounds */
   --primary-gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
   
-  /* Secondary Colors */
-  --secondary-color: #10b981;
-  --secondary-dark: #059669;
-  --secondary-light: #d1fae5;
+  /* Secondary Colors - Gray from Logo */
+  --secondary-color: #64748b;          /* Slate gray from logo */
+  --secondary-dark: #475569;           /* Darker gray */
+  --secondary-light: #f1f5f9;          /* Light gray */
   
-  /* Accent Colors */
-  --accent-color: #8b5cf6;
-  --accent-light: #ede9fe;
+  /* Accent Colors - Complementary blue-gray */
+  --accent-color: #3b82f6;             /* Bright blue accent */
+  --accent-light: #e0f2fe;             /* Very light blue */
   
-  /* Neutral Colors */
-  --text-dark: #0f172a;
-  --text-gray: #475569;
-  --text-light: #64748b;
-  --text-muted: #94a3b8;
+  /* Neutral Colors - Gray scale matching logo */
+  --text-dark: #1e293b;                /* Dark slate for text */
+  --text-gray: #475569;                /* Medium gray */
+  --text-light: #64748b;               /* Light gray */
+  --text-muted: #94a3b8;               /* Very light gray */
   
-  /* Background Colors */
+  /* Background Colors - Subtle gray tones */
   --bg-white: #ffffff;
-  --bg-light: #f8fafc;
-  --bg-gray: #f1f5f9;
-  --bg-dark: #0f172a;
+  --bg-light: #f8fafc;                 /* Very light gray */
+  --bg-gray: #f1f5f9;                  /* Light gray background */
+  --bg-dark: #1e293b;                  /* Dark slate background */
   
-  /* Border & Shadow */
-  --border-color: #e2e8f0;
+  /* Border & Shadow - Blue-gray tones */
+  --border-color: #cbd5e1;             /* Soft gray border */
   --shadow-sm: 0 1px 3px rgba(37, 99, 235, 0.1);
-  --shadow-md: 0 4px 6px rgba(37, 99, 235, 0.1);
+  --shadow-md: 0 4px 6px rgba(37, 99, 235, 0.12);
+  --shadow-lg: 0 10px 25px rgba(37, 99, 235, 0.15);
+  --shadow-xl: 0 20px 40px rgba(37, 99, 235, 0.2);
+  
+  /* Status Colors */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+/* ============================================
+   DEFAULT: Apply Logo Gray-Blue Theme
+   (Matching your logo colors)
+   ============================================ */
+:root {
+  /* Primary Colors - Blue from Logo */
+  --primary-color: #2563eb;           /* Professional blue */
+  --primary-dark: #1e40af;            /* Darker blue for hover */
+  --primary-light: #dbeafe;            /* Light blue for backgrounds */
+  --primary-gradient: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  
+  /* Secondary Colors - Gray from Logo */
+  --secondary-color: #64748b;          /* Slate gray from logo */
+  --secondary-dark: #475569;           /* Darker gray */
+  --secondary-light: #f1f5f9;          /* Light gray */
+  
+  /* Accent Colors - Complementary blue-gray */
+  --accent-color: #3b82f6;             /* Bright blue accent */
+  --accent-light: #e0f2fe;             /* Very light blue */
+  
+  /* Neutral Colors - Gray scale matching logo */
+  --text-dark: #1e293b;                /* Dark slate for text */
+  --text-gray: #475569;                /* Medium gray */
+  --text-light: #64748b;               /* Light gray */
+  --text-muted: #94a3b8;               /* Very light gray */
+  
+  /* Background Colors - Subtle gray tones */
+  --bg-white: #ffffff;
+  --bg-light: #f8fafc;                 /* Very light gray */
+  --bg-gray: #f1f5f9;                  /* Light gray background */
+  --bg-dark: #1e293b;                  /* Dark slate background */
+  
+  /* Border & Shadow - Blue-gray tones */
+  --border-color: #cbd5e1;             /* Soft gray border */
+  --shadow-sm: 0 1px 3px rgba(37, 99, 235, 0.1);
+  --shadow-md: 0 4px 6px rgba(37, 99, 235, 0.12);
   --shadow-lg: 0 10px 25px rgba(37, 99, 235, 0.15);
   --shadow-xl: 0 20px 40px rgba(37, 99, 235, 0.2);
   

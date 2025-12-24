@@ -30,10 +30,11 @@
 :root {
     --xcency-body-font: "Space Grotesk", sans-serif;
     --xcency-heading-font: "Space Grotesk", sans-serif;
-    --xcency-primary-color-one: #5D5AD6;
-    --xcency-primary-color-two: #DDF247;
-    --xcency-primary-color-three: #2EB67D;
-    --xcency-black-color-one: #101010;
+    /* Updated to Modern Tech Blue color scheme */
+    --xcency-primary-color-one: #2563eb;
+    --xcency-primary-color-two: #10b981;
+    --xcency-primary-color-three: #8b5cf6;
+    --xcency-black-color-one: #0f172a;
 }
 
 body {

@@ -28,9 +28,10 @@ const Header = () => {
   return (
     <header className={`header-area ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
-        <Link to="/" className="logo">
+        <img src="/assets/images/logo.png" alt="Programmingglore Logo" style={{ maxHeight: '40px' }} />
+        {/* <Link to="/" className="logo">
           Programmingglore
-        </Link>
+        </Link> */}
         
         <nav className="nav-menu">
           {navLinks.map((link) => (

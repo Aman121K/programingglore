@@ -29,6 +29,42 @@ const Portfolio = () => {
       description: 'Premium activewear and loungewear e-commerce platform',
       category: 'Fashion E-commerce',
       technologies: ['React', 'Shopify', 'Node.js']
+    },
+    {
+      image: '/assets/images/portfolio/rozdeal.png',
+      title: 'Rozdeal.com',
+      location: 'Madhya Pradesh, India',
+      link: 'https://rozdeal.com/',
+      description: 'Instant delivery marketplace bringing groceries, essentials, and household items within minutes at unbeatable prices',
+      category: 'E-commerce',
+      technologies: ['React', 'Node.js', 'MongoDB']
+    },
+    {
+      image: '/assets/images/portfolio/weather-app.png',
+      title: 'Weather App',
+      location: 'Global',
+      link: 'https://waether-app-new.vercel.app/',
+      description: 'Modern weather application with real-time forecasts and location-based updates',
+      category: 'Web Application',
+      technologies: ['React', 'Vercel', 'API Integration']
+    },
+    {
+      image: '/assets/images/portfolio/gamese.png',
+      title: 'Gamese.gg',
+      location: 'Brazil',
+      link: 'https://gamese.gg/',
+      description: 'Gaming platform and community hub for organizing tournaments and connecting gamers',
+      category: 'Gaming Platform',
+      technologies: ['React', 'Node.js', 'Gaming APIs']
+    },
+    {
+      image: '/assets/images/portfolio/happynature.png',
+      title: 'Happy Nature',
+      location: 'India',
+      link: 'https://www.happynature.in/',
+      description: 'Fresh farm-fresh organic milk, ghee, paneer, curd and other organic dairy products delivered to your doorstep',
+      category: 'E-commerce',
+      technologies: ['React', 'Node.js', 'E-commerce']
     }
   ];
 

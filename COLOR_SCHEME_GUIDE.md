@@ -1,4 +1,4 @@
-# Color Scheme Guide for WebInnova React
+# Color Scheme Guide for Programmingglore React
 
 ## 🎨 Overview
 

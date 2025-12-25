@@ -21,6 +21,7 @@ const Header = () => {
   const navLinks = [
     { path: '/models', label: 'Models' },
     { path: '/products', label: 'Products' },
+    { path: '/portfolio', label: 'Portfolio' },
     { path: '/projects?type=Integration', label: 'Integration' },
     { path: '/resources', label: 'Resources' },
   ];

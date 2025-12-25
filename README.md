@@ -1,6 +1,6 @@
-# Webinnova React.js Website
+# Programmingglore React.js Website
 
-This is a React.js conversion of the Webinnova PHP website, maintaining the same design and functionality.
+This is a React.js website for Programmingglore - Digital Solutions & Development, providing comprehensive web development, mobile apps, and digital marketing services.
 
 ## 🚀 Getting Started
 
@@ -12,7 +12,7 @@ This is a React.js conversion of the Webinnova PHP website, maintaining the same
 
 1. Navigate to the project directory:
 ```bash
-cd webinnova-react
+cd programmingglore-react
 ```
 
 2. Install dependencies:
@@ -30,7 +30,7 @@ The app will open at `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-webinnova-react/
+programmingglore-react/
 ├── public/
 │   ├── assets/          # All CSS, images, and JS files
 │   └── index.html       # Main HTML template
@@ -175,5 +175,5 @@ When converting pages:
 
 ## 📞 Support
 
-For issues or questions, contact: Info@webinnova.co.uk
+For issues or questions, contact: programmingglore@gmail.com
 

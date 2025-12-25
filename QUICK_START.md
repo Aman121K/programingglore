@@ -4,7 +4,7 @@
 
 ```bash
 # Navigate to the React project
-cd webinnova-react
+cd programmingglore-react
 
 # Install dependencies
 npm install
@@ -126,5 +126,5 @@ This creates an optimized build in the `build/` folder that you can deploy to an
 
 ## 📞 Need Help?
 
-Contact: Info@webinnova.co.uk
+Contact: programmingglore@gmail.com
 

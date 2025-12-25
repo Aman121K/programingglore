@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEO';
 
 const Home = () => {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -314,7 +315,9 @@ const Home = () => {
   const filteredProducts = getFilteredProducts();
 
   return (
-    <div className="site-content">
+    <>
+      <SEOHead />
+      <div className="site-content">
       {/* Hero Section with Search - Meander Style */}
       <section className="products-hero-section">
         <div className="container">
@@ -783,6 +786,7 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

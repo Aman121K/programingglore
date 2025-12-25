@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { apiService } from '../services/api';
 
 const Blog = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      await apiService.subscribeNewsletter(email);
+      setSubmitStatus('success');
+      setEmail('');
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
+  };
+
   const blogPosts = [
     {
       title: '10 Essential Web Development Trends for 2024',
@@ -120,31 +144,154 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="section" style={{ background: 'var(--bg-light)' }}>
+      {/* Newsletter Section - Enhanced Design */}
+      <section className="section" style={{ background: 'var(--bg-light)', padding: '4rem 0' }}>
         <div className="container">
-          <div className="card" style={{ textAlign: 'center', padding: '4rem 2rem', background: 'var(--primary-color)', color: 'var(--secondary-color)' }}>
-            <h2 style={{ color: 'var(--secondary-color)', marginBottom: '1rem' }}>
-              Stay Updated
-            </h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: '2rem', fontSize: '1.125rem' }}>
-              Subscribe to our newsletter for the latest articles and updates
-            </p>
-            <div style={{ maxWidth: '500px', margin: '0 auto', display: 'flex', gap: '0.75rem' }}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                style={{
-                  flex: 1,
-                  padding: '0.875rem 1.25rem',
-                  border: 'none',
-                  borderRadius: '8px',
-                  fontSize: '1rem'
-                }}
-              />
-              <button className="btn" style={{ background: 'var(--secondary-color)', color: 'var(--primary-color)', whiteSpace: 'nowrap' }}>
-                Subscribe
-              </button>
+          <div style={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            background: 'linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%)',
+            borderRadius: '24px',
+            padding: '4rem 3rem',
+            boxShadow: '0 20px 60px rgba(37, 99, 235, 0.25), 0 8px 24px rgba(37, 99, 235, 0.15)',
+            position: 'relative',
+            overflow: 'hidden',
+            textAlign: 'center'
+          }}>
+            {/* Decorative background elements */}
+            <div style={{
+              position: 'absolute',
+              top: '-50%',
+              right: '-10%',
+              width: '300px',
+              height: '300px',
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '50%',
+              filter: 'blur(60px)'
+            }}></div>
+            <div style={{
+              position: 'absolute',
+              bottom: '-30%',
+              left: '-5%',
+              width: '250px',
+              height: '250px',
+              background: 'rgba(255, 255, 255, 0.03)',
+              borderRadius: '50%',
+              filter: 'blur(50px)'
+            }}></div>
+
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <h2 style={{
+                color: '#ffffff',
+                marginBottom: '1rem',
+                fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+                fontWeight: '800',
+                letterSpacing: '-0.02em'
+              }}>
+                Stay Updated
+              </h2>
+              <p style={{
+                color: 'rgba(255, 255, 255, 0.9)',
+                marginBottom: '2.5rem',
+                fontSize: '1.125rem',
+                lineHeight: '1.6',
+                maxWidth: '600px',
+                margin: '0 auto 2.5rem'
+              }}>
+                Subscribe to our newsletter for the latest articles and updates
+              </p>
+
+              <form onSubmit={handleNewsletterSubmit} style={{ maxWidth: '550px', margin: '0 auto' }}>
+                <div style={{
+                  display: 'flex',
+                  gap: '0.5rem',
+                  background: '#ffffff',
+                  borderRadius: '10px',
+                  padding: '0.375rem',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease'
+                }}>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    required
+                    style={{
+                      flex: 1,
+                      padding: '0.75rem 1rem',
+                      border: 'none',
+                      borderRadius: '8px',
+                      fontSize: '0.9rem',
+                      outline: 'none',
+                      color: 'var(--text-dark)',
+                      background: 'transparent'
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    style={{
+                      background: 'var(--text-gray)',
+                      color: '#ffffff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '0.75rem 1.5rem',
+                      fontSize: '0.9rem',
+                      fontWeight: '600',
+                      whiteSpace: 'nowrap',
+                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                      transition: 'all 0.3s ease',
+                      opacity: isSubmitting ? 0.7 : 1,
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSubmitting) {
+                        e.target.style.background = 'var(--text-dark)';
+                        e.target.style.transform = 'translateY(-2px)';
+                        e.target.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSubmitting) {
+                        e.target.style.background = 'var(--text-gray)';
+                        e.target.style.transform = 'translateY(0)';
+                        e.target.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.15)';
+                      }
+                    }}
+                  >
+                    {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                  </button>
+                </div>
+
+                {submitStatus === 'success' && (
+                  <div style={{
+                    marginTop: '1rem',
+                    padding: '0.75rem 1rem',
+                    background: 'rgba(16, 185, 129, 0.2)',
+                    color: '#10b981',
+                    borderRadius: '8px',
+                    fontSize: '0.9rem',
+                    fontWeight: '500'
+                  }}>
+                    ✓ Successfully subscribed! Check your email.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div style={{
+                    marginTop: '1rem',
+                    padding: '0.75rem 1rem',
+                    background: 'rgba(239, 68, 68, 0.2)',
+                    color: '#ef4444',
+                    borderRadius: '8px',
+                    fontSize: '0.9rem',
+                    fontWeight: '500'
+                  }}>
+                    ✗ Something went wrong. Please try again.
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
